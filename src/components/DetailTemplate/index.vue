@@ -1,7 +1,10 @@
 <template>
   <ul class="detail-template">
-    <li class="detail-template-li" :style="{ width: computedWidth() }">
-      <img :src="ownImage" alt="" />
+    <li
+      class="detail-template-li"
+      :class="[detailInfo.isOwn ? 'active' : '']"
+      :style="{ width: computedWidth() }"
+    >
       {{ detailInfo.title }}
     </li>
   </ul>
@@ -10,7 +13,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { IDetailTemplate } from '@/components/DetailTemplate/types'
-import ownImage from '@/assets/images/ownImage.png'
 
 export default defineComponent({
   name: 'detail-tempmlate',
@@ -27,8 +29,7 @@ export default defineComponent({
       return `${value}%`
     }
     return {
-      computedWidth,
-      ownImage
+      computedWidth
     }
   }
 })
@@ -42,6 +43,10 @@ export default defineComponent({
   align-items: flex-end;
   flex-direction: column;
 
+  .active {
+    border: 3px solid yellow;
+  }
+
   &-li {
     width: 80%;
     background: #fff;
@@ -50,6 +55,7 @@ export default defineComponent({
     box-sizing: border-box;
     font-weight: bold;
     font-size: 30px;
+    border: 3px solid #fff;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -1,0 +1,48 @@
+$black: #100c2a;
+$red: red;
+$green: green;
+$blue: blue;
+$orange: orange;
+$purple: purple;
+
+// 自定义主题库
+$themes-color: (
+  black: (
+    background: $black
+  ),
+  red: (
+    background: $red
+  ),
+  green: (
+    background: $green
+  ),
+  blue: (
+    background: $blue
+  ),
+  orange: (
+    background: $orange
+  ),
+  purple: (
+    background: $purple
+  )
+);
+
+$themeList: ();
+@mixin themeColor($themes: $themes-color) {
+  @each $name, $map in $themes {
+    #{'.theme-' + $name} & {
+      @each $key, $value in $map {
+        $themeList: map-merge(
+          $themeList,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+    }
+  }
+}
+@function get-Theme($key) {
+  @return map-get($themeList, $key);
+}
