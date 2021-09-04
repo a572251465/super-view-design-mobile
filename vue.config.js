@@ -5,7 +5,7 @@ const resolvePath = (url) => path.resolve(__dirname, url)
 
 module.exports = {
   lintOnSave: true,
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? '/mobile/' : './',
   pages: {
     index: {
       entry: 'src/main.ts',
