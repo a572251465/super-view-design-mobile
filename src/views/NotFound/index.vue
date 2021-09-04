@@ -1,7 +1,7 @@
 <template>
   <div class="not-found">
     <img :src="working" alt="" />
-    <p>码字中 ......</p>
+    <p>疯狂码字中 ......</p>
   </div>
 </template>
 
