@@ -12,4 +12,10 @@ ul,
 li {
   list-style: none;
 }
+
+.auto-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 @import './mixin';

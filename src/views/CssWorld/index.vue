@@ -1,5 +1,5 @@
 <template>
-  <div class="css-world full-height full-width">
+  <div class="css-world auto-scroll full-height full-width">
     <detail-template
       v-for="(item, key) in cssData"
       :key="key"

@@ -70,6 +70,36 @@ const cssData: IDetailTemplate[] = [
         url: 'https://www.yuque.com/lihaohao-f0jle/qpfi72/vo79ib'
       }
     ]
+  },
+  {
+    title: '水平垂直对齐实现方案',
+    isOwn: true,
+    children: [
+      {
+        title: '水平垂直对齐实现方案',
+        url: 'https://www.yuque.com/tangxuefeng/ptkd32/fylc2c'
+      }
+    ]
+  },
+  {
+    title: '两列布局实现方案',
+    isOwn: true,
+    children: [
+      {
+        title: '两列布局实现方案',
+        url: 'https://www.yuque.com/tangxuefeng/ptkd32/qaqfas'
+      }
+    ]
+  },
+  {
+    title: '三列布局实现方案',
+    isOwn: true,
+    children: [
+      {
+        title: '三列布局实现方案',
+        url: 'https://www.yuque.com/tangxuefeng/ptkd32/oy5zky'
+      }
+    ]
   }
 ]
 
