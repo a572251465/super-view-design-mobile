@@ -10,8 +10,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
+import { Notify } from 'vant'
 import Header from '@/components/Header/index.vue'
 
 export default defineComponent({
@@ -25,6 +26,9 @@ export default defineComponent({
       () => `theme-${store.state.themeInfo.themeColor}`
     )
 
+    onMounted(() => {
+      Notify({ type: 'success', message: '本博客主要记录下个人学习文章' })
+    })
     return {
       themeClass
     }
