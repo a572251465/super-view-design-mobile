@@ -47,7 +47,8 @@ import {
   defineComponent,
   getCurrentInstance,
   PropType,
-  ref
+  ref,
+  watch
 } from 'vue'
 import { useStore } from 'vuex'
 import { Toast } from 'vant'
@@ -74,6 +75,12 @@ export default defineComponent({
     )
     const themeClass = computed<string>(() => `theme-${activeThemeColor.value}`)
     const readUrl = ref<string>('')
+
+    watch(articleVisible, (val) => {
+      if (val) {
+        Toast.loading({ message: '文章加载中...', duration: 3000 })
+      }
+    })
 
     const computedWidth = (): string => {
       const range: number[] = [60, 70, 80, 90]
