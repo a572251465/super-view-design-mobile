@@ -3,6 +3,7 @@ import Home from '@/views/Home/index.vue'
 
 const NotFound = () => import('@/views/NotFound/index.vue')
 const CssWorld = () => import('@/views/CssWorld/index.vue')
+const JavascriptWorld = () => import('@/views/JavascriptWorld/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -15,6 +16,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'css-world',
         components: {
           main: CssWorld
+        }
+      },
+      {
+        path: '/javascript-world',
+        name: 'javascript-world',
+        components: {
+          main: JavascriptWorld
         }
       },
       {
