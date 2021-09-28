@@ -4,6 +4,7 @@ import Home from '@/views/Home/index.vue'
 const NotFound = () => import('@/views/NotFound/index.vue')
 const CssWorld = () => import('@/views/CssWorld/index.vue')
 const JavascriptWorld = () => import('@/views/JavascriptWorld/index.vue')
+const VueWorld = import('@/views/VueWorld/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,6 +24,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'javascript-world',
         components: {
           main: JavascriptWorld
+        }
+      },
+      {
+        path: '/vue-world',
+        name: 'vue-world',
+        components: {
+          main: VueWorld
         }
       },
       {
